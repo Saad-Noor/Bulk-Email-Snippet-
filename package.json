@@ -1,0 +1,27 @@
+{
+  "name": "bulk-email-snippet-",
+  "version": "1.0.0",
+  "description": "Sending bulk email using nodemailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saad-Noor/Bulk-Email-Snippet-.git"
+  },
+  "keywords": [
+    "nodemailer",
+    "bulk",
+    "emails"
+  ],
+  "author": "saad noor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saad-Noor/Bulk-Email-Snippet-/issues"
+  },
+  "homepage": "https://github.com/Saad-Noor/Bulk-Email-Snippet-#readme",
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  }
+}
