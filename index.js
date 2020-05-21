@@ -48,26 +48,26 @@ async function sendEmail(toEmailList, emailMsg){
     },
   });
 
-  let info = await transporter.sendMail({
-    from: '"XYZ Co. 👻" <abc@xyz.com>', // sender email
-    to: toEmailList, // list of receivers email
-    subject: "Hello ✔", // Subject line
-    html: "<b>Muhammad Saad</b><p>"+emailMsg+"</p>", // html body
-  });
-
-  // toEmailList.forEach(email => {
-  //   setInterval(()=>{
-  //     transporter.sendMail({
-  //       from: '"XYZ Co. 👻" <abc@xyz.com>', // sender email
-  //       to: email, // list of receivers email
-  //       subject: "Hello ✔", // Subject line
-  //       html: "<b>Muhammad Saad</b><p>"+emailMsg+"</p>", // html body
-  //     },()=>{
-  //       console.log("send to ",email);
-  //       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));    
-  //     });
-  //   },500)
+  // let info = await transporter.sendMail({
+  //   from: '"XYZ Co. 👻" <abc@xyz.com>', // sender email
+  //   to: toEmailList, // list of receivers email
+  //   subject: "Hello ✔", // Subject line
+  //   html: "<b>Muhammad Saad</b><p>"+emailMsg+"</p>", // html body
   // });
+
+  toEmailList.forEach(email => {
+    setInterval(()=>{
+      transporter.sendMail({
+        from: '"XYZ Co. 👻" <abc@xyz.com>', // sender email
+        to: email, // list of receivers email
+        subject: "Hello ✔", // Subject line
+        html: "<b>Muhammad Saad</b><p>"+emailMsg+"</p>", // html body
+      },()=>{
+        console.log("send to ",email);
+        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));    
+      });
+    },500)
+  });
 
   // Preview only available when sending through an Ethereal account
   //console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
