@@ -51,7 +51,7 @@ var it = 0
 let interval = setInterval(async()=>{
   if(it<toEmailList.length){
     info = await transporter.sendMail({
-      from: '"XYZ Co. 👻" <abc@xyz.com>', // sender email
+      from: '"XYZ Co" <abc@xyz.com>', // sender email
       to: toEmailList[it], // list of receivers email
       subject: "Hello ✔", // Subject line
       html: "<b>Muhammad Saad</b><p>"+emailMsg+"</p>", // html body
